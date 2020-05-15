@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Colour Switch</title>
+      <meta name="viewport" content="width = device-width, initial-scale = 1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico">
+
+  </head>
+  <body>
+<div class="atleastNow">
+<img class="img1" src="icon.png" alt="PLAY">
+
+    <canvas id="gamPlay" width="345" height="500">
+
+
+    </canvas>
+
+        <!--<button onclick="next1()"class="gamPlayBtn"type="button" name="button"></button>-->
+    </div>
+
+    <script>
+function next(){
+  window.location.replace("help.html");
+}
+      var plzzMusic = new Audio("ThemeMusic.mp3");
+      plzzMusic.play();
+
+      var front1 = document.getElementById("gamPlay");
+  var ct2 = front1.getContext("2d");
+
+  var img2 = document.querySelector(".img1");
+  ct2.drawImage(img2,120,130);
+  var angle =0;
+  var angle1 = 0;
+      setInterval(rotate,500);
+      setInterval(rotate2,500);
+      setInterval(rotate3,500);
+
+        //setInterval(rotate,300);//
+
+
+        function rotate3(){
+          angle++;
+
+          var front = document.getElementById("gamPlay");
+         var ct = front.getContext("2d");
+          var no = 170 - 10-5;
+          var no1 = (front.height/2 -11)-10-5;
+          var no3 =  10 + (2*10);
+          var no4 =  10 + (2*10);
+
+          //ct.clearRect(no,no1,no3,no4);//
+          ct.save();
+          ct.beginPath();
+          ct.strokeStyle = "yellow";
+          ct.translate(170,front.height/2 -70);
+          ct.rotate(angle);
+          ct.arc(0,0,90,0,Math.PI/2);
+
+          ct.lineWidth = 10;
+          ct.stroke();
+        ct.beginPath();
+          ct.strokeStyle = "blue";
+
+          ct.arc(0,0,90,Math.PI/2,Math.PI,false);
+           ct.lineWidth = 10;
+           ct.stroke();
+        ct.beginPath();
+        ct.strokeStyle = "red";
+        ct.arc(0,0,90,Math.PI,Math.PI*3/2,false);
+        ct.lineWidth = 10;
+        ct.stroke();
+        ct.beginPath();
+        ct.strokeStyle = "purple";
+        ct.arc(0,0,90,Math.PI*3/2,2*Math.PI,false);
+        ct.lineWidth = 10;
+        ct.stroke();
+        ct.restore();
+        }
+      function rotate(){
+        angle++;
+
+        var front = document.getElementById("gamPlay");
+       var ct = front.getContext("2d");
+        var no = 170 - 10-5;
+        var no1 = (front.height/2 -11)-10-5;
+        var no3 =  10 + (2*10);
+        var no4 =  10 + (2*10);
+
+        //ct.clearRect(no,no1,no3,no4);//
+        ct.save();
+        ct.beginPath();
+        ct.strokeStyle = "yellow";
+        ct.translate(170,front.height/2 -70);
+        ct.rotate(angle);
+        ct.arc(0,0,50,0,Math.PI/2);
+
+        ct.lineWidth = 10;
+        ct.stroke();
+      ct.beginPath();
+        ct.strokeStyle = "blue";
+
+        ct.arc(0,0,50,Math.PI/2,Math.PI,false);
+         ct.lineWidth = 10;
+         ct.stroke();
+      ct.beginPath();
+      ct.strokeStyle = "red";
+      ct.arc(0,0,50,Math.PI,Math.PI*3/2,false);
+      ct.lineWidth = 10;
+      ct.stroke();
+      ct.beginPath();
+      ct.strokeStyle = "purple";
+      ct.arc(0,0,50,Math.PI*3/2,2*Math.PI,false);
+      ct.lineWidth = 10;
+      ct.stroke();
+      ct.restore();}
+
+      function rotate2(){
+        angle1--;
+        var end = document.getElementById("gamPlay");
+        var ct1 = end.getContext("2d");
+        var no = 170 - 10-5;
+        var no1 = (end.height/2 - 11)-10-5;
+        var no3 =  10 + (2*10);
+        var no4 =  10 + (2*10);
+
+      //  ct1.clearRect(no,no1,no3,no4);//
+        ct1.save();
+        ct1.beginPath();
+        ct1.strokeStyle = "yellow";
+        ct1.translate(170,end.height/2 -70);
+        ct1.rotate(angle1);
+        ct1.arc(0,0,70,0,Math.PI/2);
+
+        ct1.lineWidth = 10;
+        ct1.stroke();
+      ct1.beginPath();
+        ct1.strokeStyle = "blue";
+
+        ct1.arc(0,0,70,Math.PI/2,Math.PI,false);
+         ct1.lineWidth = 10;
+         ct1.stroke();
+      ct1.beginPath();
+      ct1.strokeStyle = "red";
+      ct1.arc(0,0,70,Math.PI,Math.PI*3/2,false);
+      ct1.lineWidth = 10;
+      ct1.stroke();
+      ct1.beginPath();
+      ct1.strokeStyle = "purple";
+      ct1.arc(0,0,70,Math.PI*3/2,2*Math.PI,false);
+      ct1.lineWidth = 10;
+      ct1.stroke();
+      ct1.restore();}
+
+
+      var front1 = document.getElementById("gamPlay");
+  var ct2 = front1.getContext("2d");
+  ct2.font = "40px Comic Sans MS";
+  ct2.fillStyle = "white";
+  ct2.textAlign = "center";
+  ct2.fillText("How long can you",170,350);
+  ct2.fillText("stay alive???",170,400);
+
+
+
+
+  function getMousePosition(canvas, event) {
+             let rect = canvas.getBoundingClientRect();
+             let x = event.clientX - rect.left;
+             let y = event.clientY - rect.top;
+             if(x>135 && x<205 && y>142 && y<215){
+               var plzz2 = new Audio("music.mp3");
+               plzz2.play();
+               setTimeout(function(){
+               window.location.replace("help.html");},2000);
+             }
+         }
+
+         let canvasElem = document.querySelector("canvas");
+
+         canvasElem.addEventListener("mousedown", function(e)
+         {
+             getMousePosition(canvasElem, e);
+         });
+
+
+
+    </script>
+  </body>
+</html>

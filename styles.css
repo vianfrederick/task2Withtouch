@@ -1,0 +1,126 @@
+body{
+  text-align: center;
+  margin-top: 80px;
+background-image: url("backgroundpic.jpg");
+  position: relative;
+
+}
+canvas{
+  background-color: grey;
+  width: 345px;
+  height:500px;
+
+}
+
+.img1{
+  display: none;
+}
+
+.atleastNow{
+  position: relative;
+  text-align: center;
+}
+.gamPlayBtn{
+  text-align: center;
+  margin: auto;
+  width: 75px;
+  height: 75px;
+  background-image: url("plays.png");
+  border-radius: 50%;
+  position: absolute;
+  top: 28.5%;
+  left: 47.1%;
+  border-top: 1px;
+  border-left: 1px;
+}
+
+
+.btn{
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  background-image: url("playagain.jpg");
+  position: absolute;
+  top: 80%;
+  left: 43%;
+}
+
+
+#gamPlay{
+
+  border:1px solid #d3d3d3;
+
+  background-color: black;
+  border: 1px dashed yellow;
+  border-radius: 15px;
+  max-width: 370px;
+}
+
+#gamover{
+  border:1px solid #d3d3d3;
+  background-color: black;
+  border: 1px dashed yellow;
+  border-radius: 15px;
+  max-width: 370px;
+
+}
+#frontPage{
+  border:1px solid #d3d3d3;
+  background-color: black;
+  border: 1px dashed yellow;
+  border-radius: 15px;
+  max-width: 370px;
+
+}
+
+.container{
+  width: 345px;
+  height: 500px;
+  border:1px solid #d3d3d3;
+  background-color: black;
+  border: 1px dashed yellow;
+  border-radius: 15px;
+  max-width: 370px;
+  text-align: center;
+  margin:auto;
+  position: relative;
+}
+.scores{
+  position: absolute;
+  left: 17%;
+  top: 10%;
+  font-size: 3rem;
+  font-family: sans-serif Castellar;
+  color: green;
+}
+
+.show{
+  position: absolute;
+  top: 25%;
+  font-size: 2rem;
+  left: 35%;
+  color: white;
+}
+
+.highScore{
+  position: absolute;
+  top: 45%;
+  font-size: 3rem;
+  left:5%;
+  color: aquamarine;
+}
+
+.highFinal{
+  position: absolute;
+  top: 60%;
+  left: 40%;
+  font-size: 2rem;
+  color: white;
+}
+
+.head{
+  font-size: 4rem;
+  color: yellow;
+  margin-bottom: : 0;
+
+}
